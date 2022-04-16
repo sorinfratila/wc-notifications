@@ -11,7 +11,8 @@
         "tsc:watch": "tsc --watch",
         "start:single": "concurrently --kill-others --names tsc,web-dev-server \"yarn tsc:watch\" \"web-dev-server --app-index index.html --node-resolve --open --watch\"",
         "start": "concurrently --kill-others --names tsc,web-dev-server \"yarn tsc:watch\" \"web-dev-server --config web-dev-server.config.js\"",
-        "build": "rimraf dist && tsc && rollup -c rollup.config.js"
+        "build": "rimraf dist && tsc && rollup -c rollup.config.js",
+        "prepare": "husky install"
     },
     "dependencies": {
         "@webcomponents/webcomponentsjs": "^2.6.0",
@@ -19,6 +20,8 @@
         "lit": "^2.2.2"
     },
     "devDependencies": {
+        "@commitlint/cli": "^16.2.3",
+        "@commitlint/config-conventional": "^16.2.1",
         "@open-wc/building-rollup": "^2.0.1",
         "@rollup/plugin-json": "^4.1.0",
         "@typescript-eslint/eslint-plugin": "^4.0.0",
@@ -35,6 +38,7 @@
         "eslint-plugin-node": "^11.1.0",
         "eslint-plugin-prettier": "^3.4.0",
         "eslint-plugin-promise": "^5.0.0",
+        "husky": "^7.0.4",
         "prettier": "^2.3.2",
         "rollup": "^2.70.2",
         "ts-standard": "^11.0.0",
