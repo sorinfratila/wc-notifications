@@ -2,7 +2,7 @@ import { css, html, LitElement, TemplateResult } from 'lit'
 import { customElement } from 'lit/decorators.js'
 
 @customElement('wc-notification')
-export class Notification extends LitElement {
+export class NotificationComponent extends LitElement {
     static styles = css`
         li {
             list-style-type: none;

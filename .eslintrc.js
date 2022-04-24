@@ -13,6 +13,7 @@ module.exports = {
             extends: 'standard-with-typescript',
             rules: {
                 ...config.rules,
+                '@typescript-eslint/space-before-function-paren': 'off',
                 '@typescript-eslint/indent': 'off',
                 '@typescript-eslint/no-explicit-any': 'error',
                 '@typescript-eslint/no-var-requires': 'off',

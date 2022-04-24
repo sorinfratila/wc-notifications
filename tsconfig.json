@@ -17,7 +17,6 @@
         "noImplicitThis": true,
         "noEmitOnError": true,
         "outDir": "./dist",
-        // Only necessary because @types/uglify-js can't find types for source-map
         "baseUrl": ".",
         "rootDir": "./",
         "allowSyntheticDefaultImports": true,
@@ -28,5 +27,6 @@
     "include": [
         "node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.d.ts",
         "src/**/*.ts"
-    ]
+    ],
+    "exclude": ["node_modules", "**/*.spec.ts"],
 }
